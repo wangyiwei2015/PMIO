@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: core_application
+title: STM32G4 超声回波采集核心应用
+scope:
+    - Core/
+source_files: []
+depends_on: []
+related_to: []

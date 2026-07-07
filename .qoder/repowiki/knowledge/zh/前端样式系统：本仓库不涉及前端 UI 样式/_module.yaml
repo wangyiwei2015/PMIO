@@ -1,0 +1,7 @@
+schema_version: 1
+module_path: frontend_style
+title: 前端样式系统：本仓库不涉及前端 UI 样式
+scope: []
+source_files: []
+depends_on: []
+related_to: []

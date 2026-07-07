@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: usb_device_stack
+title: STM32 USB 设备栈（FS CDC 虚拟串口）
+scope:
+    - USB_Device/
+source_files: []
+depends_on: []
+related_to: []

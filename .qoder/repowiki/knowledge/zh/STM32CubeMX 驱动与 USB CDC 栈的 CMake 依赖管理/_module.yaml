@@ -1,0 +1,15 @@
+schema_version: 1
+module_path: dependency_management
+title: STM32CubeMX 驱动与 USB CDC 栈的 CMake 依赖管理
+scope: []
+source_files:
+    - CMakeLists.txt
+    - cmake/stm32cubemx/CMakeLists.txt
+    - cmake/gcc-arm-none-eabi.cmake
+    - cmake/starm-clang.cmake
+    - Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h
+    - Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h
+    - Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+    - Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+depends_on: []
+related_to: []

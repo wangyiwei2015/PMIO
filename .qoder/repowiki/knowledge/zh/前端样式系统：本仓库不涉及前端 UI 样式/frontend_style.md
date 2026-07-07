@@ -1,0 +1,1 @@
+该仓库是一个基于 STM32G474xx 的嵌入式固件项目，核心功能为超声回波采集与 USB CDC 虚拟串口通信。代码完全运行在 MCU 端（C/C++），不包含任何前端资源（CSS、SCSS、HTML、JS 等），也没有 Web 界面或桌面 GUI 相关代码。因此 `frontend_style` 类别不适用于此仓库。

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: drivers_hal_cmsis
+title: STM32G4xx CMSIS 核心与 HAL/LL 驱动库
+scope:
+    - Drivers/
+source_files: []
+depends_on: []
+related_to: []

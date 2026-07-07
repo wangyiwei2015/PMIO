@@ -1,0 +1,162 @@
+schema_version: 1
+module_path: ""
+title: STM32G474xx 超声回波采集与 USB CDC 通信系统
+scope:
+    - README.md
+    - .gitignore
+    - .mxproject
+    - CMakeLists.txt
+    - CMakePresets.json
+    - STM32G474XX_FLASH.ld
+    - startup_stm32g474xx.s
+    - .qoder\repowiki\knowledge\zh\STM32 HAL 错误处理与异常中断机制\_module.yaml
+    - .qoder\repowiki\knowledge\zh\STM32 HAL 错误处理与异常中断机制\error_handling.md
+    - .qoder\repowiki\knowledge\zh\STM32CubeMX 与 CMake 构建配置体系\_module.yaml
+    - .qoder\repowiki\knowledge\zh\STM32CubeMX 与 CMake 构建配置体系\configuration_system.md
+    - .qoder\repowiki\knowledge\zh\STM32CubeMX 驱动的本地化与 CMake 构建依赖管理\_module.yaml
+    - .qoder\repowiki\knowledge\zh\STM32CubeMX 驱动的本地化与 CMake 构建依赖管理\dependency_management.md
+    - .qoder\repowiki\knowledge\zh\STM32G4 超声信号触发采集与环形缓冲处理\_module.yaml
+    - .qoder\repowiki\knowledge\zh\STM32G4 超声信号触发采集与环形缓冲处理\技术栈.md
+    - .qoder\repowiki\knowledge\zh\STM32G4 超声信号触发采集与环形缓冲处理\架构设计.md
+    - .qoder\repowiki\knowledge\zh\STM32G4 超声信号触发采集与环形缓冲处理\概述.md
+    - .qoder\repowiki\knowledge\zh\STM32G4 超声信号触发采集与环形缓冲处理\特殊配置与命令.md
+    - .qoder\repowiki\knowledge\zh\STM32G4 超声信号触发采集与环形缓冲处理\编码规范.md
+    - .qoder\repowiki\knowledge\zh\_index.yaml
+    - .qoder\repowiki\knowledge\zh\基于 CMake 与 STM32CubeMX 的嵌入式构建系统\_module.yaml
+    - .qoder\repowiki\knowledge\zh\基于 CMake 与 STM32CubeMX 的嵌入式构建系统\build_system.md
+    - .qoder\repowiki\zh\content\API参考手册.md
+    - .qoder\repowiki\zh\content\快速开始.md
+    - .qoder\repowiki\zh\content\故障排除.md
+    - .qoder\repowiki\zh\content\构建与部署.md
+    - .qoder\repowiki\zh\content\核心模块详解\DMA环形缓冲区管理模块.md
+    - .qoder\repowiki\zh\content\核心模块详解\中断处理系统.md
+    - .qoder\repowiki\zh\content\核心模块详解\双ADC同步采样模块.md
+    - .qoder\repowiki\zh\content\核心模块详解\外部触发检测系统.md
+    - .qoder\repowiki\zh\content\核心模块详解\数据重构算法模块.md
+    - .qoder\repowiki\zh\content\核心模块详解\核心模块详解.md
+    - .qoder\repowiki\zh\content\系统架构设计\数据流设计.md
+    - .qoder\repowiki\zh\content\系统架构设计\架构模式与设计理念.md
+    - .qoder\repowiki\zh\content\系统架构设计\系统架构设计.md
+    - .qoder\repowiki\zh\content\系统架构设计\系统边界与集成接口.md
+    - .qoder\repowiki\zh\content\系统架构设计\组件交互关系.md
+    - .qoder\repowiki\zh\content\项目概述.md
+    - .qoder\repowiki\zh\meta\repowiki-metadata.json
+    - .settings\bundles-lock.store.json
+    - .settings\bundles.store.json
+    - .settings\ide.store.json
+    - .vscode\settings.json
+    - Core\Inc\main.h
+    - Core\Inc\stm32g4xx_hal_conf.h
+    - Core\Inc\stm32g4xx_it.h
+    - Core\Src\main.c
+    - Core\Src\stm32g4xx_hal_msp.c
+    - Core\Src\stm32g4xx_it.c
+    - Core\Src\syscalls.c
+    - Core\Src\sysmem.c
+    - Core\Src\system_stm32g4xx.c
+    - Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g474xx.h
+    - Drivers\CMSIS\Device\ST\STM32G4xx\Include\stm32g4xx.h
+    - Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h
+    - Drivers\CMSIS\Device\ST\STM32G4xx\LICENSE.txt
+    - Drivers\CMSIS\Include\cmsis_armcc.h
+    - Drivers\CMSIS\Include\cmsis_armclang.h
+    - Drivers\CMSIS\Include\cmsis_armclang_ltm.h
+    - Drivers\CMSIS\Include\cmsis_compiler.h
+    - Drivers\CMSIS\Include\cmsis_gcc.h
+    - Drivers\CMSIS\Include\cmsis_iccarm.h
+    - Drivers\CMSIS\Include\cmsis_version.h
+    - Drivers\CMSIS\Include\core_armv81mml.h
+    - Drivers\CMSIS\Include\core_armv8mbl.h
+    - Drivers\CMSIS\Include\core_armv8mml.h
+    - Drivers\CMSIS\Include\core_cm0.h
+    - Drivers\CMSIS\Include\core_cm0plus.h
+    - Drivers\CMSIS\Include\core_cm1.h
+    - Drivers\CMSIS\Include\core_cm23.h
+    - Drivers\CMSIS\Include\core_cm3.h
+    - Drivers\CMSIS\Include\core_cm33.h
+    - Drivers\CMSIS\Include\core_cm35p.h
+    - Drivers\CMSIS\Include\core_cm4.h
+    - Drivers\CMSIS\Include\core_cm7.h
+    - Drivers\CMSIS\Include\core_sc000.h
+    - Drivers\CMSIS\Include\core_sc300.h
+    - Drivers\CMSIS\Include\mpu_armv7.h
+    - Drivers\CMSIS\Include\mpu_armv8.h
+    - Drivers\CMSIS\Include\tz_context.h
+    - Drivers\CMSIS\LICENSE.txt
+    - Drivers\STM32G4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_adc.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_adc_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_cortex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_def.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_dma.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_dma_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_exti.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_flash_ramfunc.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_gpio_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_pcd.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_pcd_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_pwr.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_pwr_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_hal_rcc_ex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_adc.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_bus.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_cortex.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_crs.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dma.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_dmamux.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_exti.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_gpio.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_pwr.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_rcc.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_system.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_usb.h
+    - Drivers\STM32G4xx_HAL_Driver\Inc\stm32g4xx_ll_utils.h
+    - Drivers\STM32G4xx_HAL_Driver\LICENSE.txt
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pcd.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pcd_ex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c
+    - Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_usb.c
+    - G4test.ioc
+    - Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h
+    - Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Src\usbd_cdc.c
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_core.c
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ctlreq.c
+    - Middlewares\ST\STM32_USB_Device_Library\Core\Src\usbd_ioreq.c
+    - USB_Device\App\usb_device.c
+    - USB_Device\App\usb_device.h
+    - USB_Device\App\usbd_cdc_if.c
+    - USB_Device\App\usbd_cdc_if.h
+    - USB_Device\App\usbd_desc.c
+    - USB_Device\App\usbd_desc.h
+    - USB_Device\Target\usbd_conf.c
+    - USB_Device\Target\usbd_conf.h
+    - cmake\gcc-arm-none-eabi.cmake
+    - cmake\starm-clang.cmake
+    - cmake\stm32cubemx\CMakeLists.txt
+source_files: []
+depends_on: []
+related_to: []

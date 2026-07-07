@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: build_system
+title: 基于 CMake 与 STM32CubeMX 的嵌入式构建系统
+scope: []
+source_files:
+    - CMakeLists.txt
+    - CMakePresets.json
+    - cmake/gcc-arm-none-eabi.cmake
+    - cmake/starm-clang.cmake
+    - cmake/stm32cubemx/CMakeLists.txt
+    - STM32G474XX_FLASH.ld
+depends_on: []
+related_to: []

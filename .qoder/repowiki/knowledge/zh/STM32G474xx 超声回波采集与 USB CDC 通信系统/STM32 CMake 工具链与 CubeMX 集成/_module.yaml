@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: build_tooling
+title: STM32 CMake 工具链与 CubeMX 集成
+scope:
+    - cmake/
+source_files: []
+depends_on: []
+related_to: []

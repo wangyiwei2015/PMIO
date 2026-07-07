@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: logging_system
+title: 嵌入式日志系统：基于 USB CDC 的原始数据输出（无结构化日志框架）
+scope: []
+source_files:
+    - Core/Src/main.c
+    - USB_Device/App/usbd_cdc_if.c
+    - Core/Src/syscalls.c
+    - Core/Inc/stm32g4xx_hal_conf.h
+depends_on: []
+related_to: []

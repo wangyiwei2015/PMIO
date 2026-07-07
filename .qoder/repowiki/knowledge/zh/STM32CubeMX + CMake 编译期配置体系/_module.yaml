@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: configuration_system
+title: STM32CubeMX + CMake 编译期配置体系
+scope: []
+source_files:
+    - Core/Inc/stm32g4xx_hal_conf.h
+    - Core/Src/main.c
+    - USB_Device/Target/usbd_conf.h
+    - USB_Device/App/usbd_desc.h
+    - CMakeLists.txt
+    - cmake/stm32cubemx/CMakeLists.txt
+    - CMakePresets.json
+depends_on: []
+related_to: []
