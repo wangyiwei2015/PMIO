@@ -5,4 +5,7 @@ scope:
     - cmake/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: core_application
+    - path: drivers_hal_cmsis
+    - path: usb_device_stack

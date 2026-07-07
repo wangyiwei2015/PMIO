@@ -5,4 +5,7 @@ scope:
     - Core/
 source_files: []
 depends_on: []
-related_to: []
+related_to:
+    - path: build_tooling
+    - path: drivers_hal_cmsis
+    - path: usb_device_stack

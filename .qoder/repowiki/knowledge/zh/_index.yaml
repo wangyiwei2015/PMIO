@@ -3,7 +3,7 @@ schema_version: 1
 locale: zh-CN
 branch: main
 nodes_managed: true
-exported_at: "2026-07-07T09:29:41Z"
+exported_at: "2026-07-07T10:15:33Z"
 modules:
     "":
         dir_name: STM32G474xx 超声回波采集与 USB CDC 通信系统
@@ -194,7 +194,10 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: core_application
+            - path: drivers_hal_cmsis
+            - path: usb_device_stack
     configuration_system:
         dir_name: STM32CubeMX + CMake 编译期配置体系
         title: STM32CubeMX + CMake 编译期配置体系
@@ -218,7 +221,10 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: build_tooling
+            - path: drivers_hal_cmsis
+            - path: usb_device_stack
     dependency_management:
         dir_name: STM32CubeMX 驱动与 USB CDC 栈的 CMake 依赖管理
         title: STM32CubeMX 驱动与 USB CDC 栈的 CMake 依赖管理
@@ -243,7 +249,9 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: build_tooling
+            - path: core_application
     error_handling:
         dir_name: STM32 HAL 错误处理与异常中断机制
         title: STM32 HAL 错误处理与异常中断机制
@@ -283,4 +291,6 @@ modules:
         source_files: []
         children: []
         depends_on: []
-        related_to: []
+        related_to:
+            - path: build_tooling
+            - path: core_application

@@ -3,13 +3,18 @@ PMUT AFE
 
 基于 STM32G474 的裸机超声信号采集固件，用于验证双 ADC 交错模式下的高速信号触发捕获与数据上报。
 
-功能：
+## 功能
 - **双 ADC 交错采样**：ADC1 + ADC2 以 8 MSPS 有效速率采样 kHz~MHz 超声信号
 - **硬件触发采集**：PA4 GPIO EXTI 上升沿触发，精确捕获触发时刻
 - **零拷贝环形缓冲**：120 元素 DMA 循环缓冲区（240 样本），预触发 10 µs + 后触发 20 µs
 - **USB CDC 数据上报**：采集完成后通过 USB 虚拟串口发送 ADC 原始值（每样本一行十进制数）
 - **超声回波抑制**：传输期间丢弃所有 EXTI 边沿，仅捕获首次到达信号
 - **PC13 LED 指示**：开漏输出，active low
+- 下一步实现：硬件集成THS4551、OPA657、电源、发射模块MOS、收发切换保护
+
+## Contributors
+- STM32CubeMX配置工程师：Gemini (Gemini 3.5 Flash)
+- STM32嵌入式C++工程师：Qoder (Qwen3.7-Max)
 
 ## 硬件要求
 
@@ -21,20 +26,11 @@ PMUT AFE
 | LED | PC13 (开漏, active low) |
 | USB | USB FS (CDC 虚拟串口) |
 
-## 工具链版本
+## 构建
 
-本项目使用 STM32CubeIDE 2.1.1 内置工具链：
-
-| 工具 | 版本 |
-|------|------|
-| STM32CubeIDE | 2.1.1 |
-| ARM GCC (arm-none-eabi-gcc) | 14.3.1 (GNU Tools for STM32 14.3.rel1) |
-| CMake | 3.30.8 |
-| Ninja | 1.11.1 |
+本项目使用 STM32CubeIDE 2.1.1 内置工具链
 
 > 工具链位于 STM32CubeIDE 安装目录的插件子目录中，默认未加入系统 PATH。
-
-## 构建
 
 ```powershell
 # 配置
